@@ -1,0 +1,7 @@
+# Critical Level
+
+DEBUG
+INFO
+WARNING
+ERROR
+FATAL
