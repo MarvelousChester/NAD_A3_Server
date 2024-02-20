@@ -19,4 +19,17 @@ service_port = dataConfig["log_service_config"]["port"]
 
 log_location = dataConfig["log_service_config"]["log_location"]
 
-print(service_ip, service_port, log_location)
+
+# setting up listener
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+address = (service_ip, int(service_port))
+
+sock.bind(address)
+
+
+sock.listen()
+while True:
+        print("waiting for connection")
+        conn, addr = sock.accept()
