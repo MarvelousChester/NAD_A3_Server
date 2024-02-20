@@ -1,0 +1,20 @@
+
+
+{
+
+    "format" : {
+
+        "level": "",
+        "iP" : "",
+        "dateTime": "",
+        "timezone":"",
+        "type": "",
+        "Content": "" 
+    },
+    "log_service_config":{
+
+        "ip": "127.0.0.1",
+        "port": "30000",
+        "log_location": "./log.txt" 
+    }
+}

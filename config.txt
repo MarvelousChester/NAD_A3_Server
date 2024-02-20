@@ -1,0 +1,37 @@
+
+How Long will work
+-----------------
+Log Format: 1 2 3 4 5 6
+Log Record Sent: A B C D E F
+
+LOG Recoreded : 1: A 2:B 3:C 4:D 5:E 6:F
+
+It will assume the last will be the content and rest is headers
+
+What will the seperator be?
+
+
+-------> Note an have instance_id in config will add instance of the server if added
+
+Format
+-----------
+-- Format (It will read by order and fill the log content based upon the order given example above) 
+
+
+use UTC,
+Have a Instance Identifier
+
+IP, DATE, TIME, LEVEL, --> Content of Log 
+
+[LOG] || 192.15.61.123 || 2024-06-21 6:05:00PM GED || - "Initailized connection"
+[ERROR]
+[WARNING] 
+
+
+Other config 
+----------------
+-- IP Configuration and Port to set up logger service
+
+-- logging file location
+
+
