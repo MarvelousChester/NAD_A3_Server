@@ -4,9 +4,10 @@
         "ip": "",
         "dateTime": "",
         "timezone": "",
-        "content" : ""
+        "content" : "",
+        "instance_id": ""
     },
-    "formatted_message" : "[{level}] [IP:{ip}] [{dateTime} {timezone}] - {content}",
+    "formatted_message" : "[{level}] [IP:{ip}] [{dateTime} {timezone}] - {content} \n\t[PID: {instance_id}]",
     "log_service_config":{
 
         "ip": "127.0.0.1",

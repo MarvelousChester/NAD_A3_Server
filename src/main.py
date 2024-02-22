@@ -11,20 +11,21 @@ def formatMessage(record):
     data_config = json.load(config_file)
     record_in_json = json.loads(decoded_record)
 
+    
     if(data_config["format"].keys() == record_in_json.keys()):
         print("same")
+        formatted_message = dataConfig["formatted_message"].format(**record_in_json)
+
+        formatted_message += "\n"   
     else:
         print("not same")
         # DO I Send back message?
-    
-    formatted_message = dataConfig["formatted_message"].format(**record_in_json)
-    
-    formatted_message += "\n"   
+        formatted_message = "Invalid Log Record Given\n"
+ 
 
     return formatted_message
- 
+ #https://pypi.org/project/pyrate-limiter/
 def writeIntoLog(log_path, record):
-    
     
     # When logging get instance id and attach that to log file name and then just date
     try:        
@@ -35,12 +36,6 @@ def writeIntoLog(log_path, record):
         print("ERROR: record could not be written to file")
         # Send a message back that something went wrong 
             
-
-
-# Open JSON
-
-# Read, IP, PORT, and File Location
-# Store in variables
 
 
 config_file = open("config.json")
@@ -69,8 +64,7 @@ while True:
         conn, addr = sock.accept()
         print("Connected")
         
-        
-        data = conn.recv(1024)
+        data = conn.recv(2054)
         if data:
             writeIntoLog(log_location, data)
                   
