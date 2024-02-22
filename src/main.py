@@ -2,50 +2,26 @@ import socket
 import sys
 import json
 
+
+
 def formatMessage(record):
     
-    
-    decoded_record = record.decode("utf-8")
-    new_record_list = decoded_record.split("|!|")
+    decoded_record = record.decode("unicode_escape")
     config_file = open("config.json")
-    dataConfig = json.load(config_file)
+    data_config = json.load(config_file)
+    record_in_json = json.loads(decoded_record)
 
-    counter = -1
-    print(new_record_list)
+    if(data_config["format"].keys() == record_in_json.keys()):
+        print("same")
+    else:
+        print("not same")
+        # DO I Send back message?
     
-    # ADD ERROR CHECKING HERE, THIS WHERE YOU MATCH THE CONTENT WITH FORMAT IN CONFIG
-    for i in dataConfig["format"]:
-        counter = counter + 1
-        print(i)
-        dataConfig["format"][i] = new_record_list[counter]
-        print(counter)
-
-    formatted_message = dataConfig["formatted_message"].format(**dataConfig["format"])
+    formatted_message = dataConfig["formatted_message"].format(**record_in_json)
     
-    formatted_message += "\n"
-        
-        
-    # how many formats given
-    # Can i asscoiate the value for format and then just print?
-    # probably
-  
-    # PUT THE CONTENT IN ORDER OF THE FORMAT 
-    
-   # level = new_record_list[0]
-   # ip = new_record_list[1]
-    #date_time = new_record_list[2] 
-   # time_zone = new_record_list[3]
-   # content = new_record_list[4]
-   #
-    
-   #formatted_message = f"[{level}] {ip} {date_time} {time_zone} - {content}\n"
-    
-   # formatted_message = f"[{level}] [{ip}] [{date_time} {time_zone}] - {content}\n"
-    
-   # print(formatted_message)
+    formatted_message += "\n"   
 
     return formatted_message
-
  
 def writeIntoLog(log_path, record):
     
@@ -53,7 +29,7 @@ def writeIntoLog(log_path, record):
     # When logging get instance id and attach that to log file name and then just date
     try:        
         with open(log_path, 'a') as file:
-            formatted_message = formatMessage1(record)
+            formatted_message = formatMessage(record)
             file.write(formatted_message)
     except IOError:
         print("ERROR: record could not be written to file")
