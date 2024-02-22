@@ -1,9 +1,6 @@
-import asyncio
 import socket
 import sys
 import json
-import aiofiles
-
 
 import threading
 
@@ -53,11 +50,6 @@ service_port = dataConfig["log_service_config"]["port"]
 log_location = dataConfig["log_service_config"]["log_location"]
 
 
-
-# JUST USE THREADs
-
-# setting up listener
-
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 address = (service_ip, int(service_port))
@@ -80,9 +72,6 @@ while (True):
     finally:
         conn.close()
 
-        # accept connection
-        # shoot of an async worker that will be able to write into file
-        # then write into
         
         
 # Could have it so that each time a writer is going and it's done it will decrement and incr 
