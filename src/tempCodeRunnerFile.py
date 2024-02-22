@@ -1,1 +1,1 @@
-print(record)
+counter += 1

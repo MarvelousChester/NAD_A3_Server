@@ -1,16 +1,12 @@
-
-
 {
-
     "format" : {
-
         "level": "",
-        "ip" : "",
+        "ip": "",
         "dateTime": "",
-        "timezone":"",
-        "type": "",
-        "Content": "" 
+        "timezone": "",
+        "content" : ""
     },
+    "formatted_message" : "LEVEL: [{level}] [IP:{ip}] [{dateTime} {timezone}] - {content}",
     "log_service_config":{
 
         "ip": "127.0.0.1",
