@@ -3,7 +3,7 @@ import sys
 import json
 
 import threading
-
+INVALID_LOG_NOT_WRITTEN_MESSAGE = "Invalid Log Record Given, Not Written"
 def formatMessage(record, format_config):
     
     decoded_record = record.decode("unicode_escape")
@@ -13,7 +13,7 @@ def formatMessage(record, format_config):
     
     if(format_config["format_1"].keys() == record_in_json.keys()):
         print("same")
-        formatted_message = format_config["formatted_1_message"].format(**record_in_json)
+        formatted_message = format_config["formatted_message_1"].format(**record_in_json)
         formatted_message += "\n"   
     elif format_config["format_2"].keys() == record_in_json.keys():
         print("Test")
@@ -22,14 +22,14 @@ def formatMessage(record, format_config):
     else:
         print("not same")
         # DO I Send back message?
-        formatted_message = "Invalid Log Record Given\n"
+        formatted_message = INVALID_LOG_NOT_WRITTEN_MESSAGE
  
     return formatted_message
  #https://pypi.org/project/pyrate-limiter/
 
 lock = threading.Lock()
             
-def writeIntoLogWorker(record, format_config):
+def writeIntoLogWorker(record, format_config, conn):
    
     log_location = format_config["log_service_config"]["log_location"]
     if record:
@@ -37,12 +37,19 @@ def writeIntoLogWorker(record, format_config):
         try:        
             with open(log_location, 'a') as file:
                 formatted_message = formatMessage(record, format_config)
-                file.write(formatted_message)
+                if formatted_message == INVALID_LOG_NOT_WRITTEN_MESSAGE:
+                    conn.sendall(bytes(formatted_message, 'utf-8'))
+                    print("test555")
                 # Should add a timeout in case wait takes too long then skip to stop hanging of service
+                else:
+                    file.write(formatted_message)
+                    conn.sendall(bytes("0", 'utf-8'))
                 lock.release()
-        except IOError:
-            print("ERROR: record could not be written to file")
-
+        except Exception as e:
+            print(e)
+            
+ #except IOError:
+          #  print("ERROR: record could not be written to file")
 
 config_file = open("config.json")
 
@@ -70,8 +77,8 @@ while (True):
     print("Connected")
     try:
         record = conn.recv(2054)
-        x = threading.Thread(target=writeIntoLogWorker, args=(record, dataConfig,))
-        x.start()
+        writeIntoLogWorker(record, dataConfig, conn)
+        
     except Exception as e:
         print(f"Error with connection :{e}")
     finally:

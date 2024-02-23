@@ -1,79 +1,10 @@
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-Invalid Log Record Given
-{"time_stamp": "2024-02-23 17:23:45 (UTC-05:00) Eastern Time (US & Canada)", "instance_id": "8637a056-abaa-4b17-bdd8-e326cfe4847a", "severity": 0, "type": null, "ip": "169.254.76.3", "message": "TESTING EMERGENCY LEVEL"}{"time_stamp": "2024-02-23 17:23:45 (UTC-05:00) Eastern Time (US & Canada)", "instance_id": "8637a056-abaa-4b17-bdd8-e326cfe4847a", "severity": 1, "type": null, "ip": "169.254.76.3", "message": "TESTING ALERT LEVEL"}{"time_stamp": "2024-02-23 17:23:45 (UTC-05:00) Eastern Time (US & Canada)", "instance_id": "8637a056-abaa-4b17-bdd8-e326cfe4847a", "severity": 2, "type": null, "ip": "169.254.76.3", "message": "TESTING CRITICAL LEVEL"}{"time_stamp": "2024-02-23 17:23:45 (UTC-05:00) Eastern Time (US & Canada)", "instance_id": "8637a056-abaa-4b17-bdd8-e326cfe4847a", "severity": 3, "type": null, "ip": "169.254.76.3", "message": "TESTING ERROR LEVEL"}{"time_stamp": "2024-02-23 17:23:45 (UTC-05:00) Eastern Time (US & Canada)", "instance_id": "8637a056-abaa-4b17-bdd8-e326cfe4847a", "severity": 4, "type": null, "ip": "169.254.76.3", "message": "TESTING WARNING LEVEL"}{"time_stamp": "2024-02-23 17:23:45 (UTC-05:00) Eastern Time (US & Canada)", "instance_id": "8637a056-abaa-4b17-bdd8-e326cfe4847a", "severity": 5, "type": null, "ip": "169.254.76.3", "message": "TESTING NOTICE LEVEL"}{"time_stamp": "2024-02-23 17:23:45 (UTC-05:00) Eastern Time (US & Canada)", "instance_id": "8637a056-abaa-4b17-bdd8-e326cfe4847a", "severity": 6, "type": null, "ip": "169.254.76.3", "message": "TESTING INFO LEVEL"}{"time_stamp": "2024-02-23 17:23:45 (UTC-05:00) Eastern Time (US & Canada)", "instance_id": "8637a056-abaa-4b17-bdd8-e326cfe4847a", "severity": 7, "type": null, "ip": "169.254.76.3", "message": "TESTING DEBUG LEVEL"}{
-    "time_stamp": "2024-02-23 17:25:15 (UTC-05:00) Eastern Time (US & Canada)",
-    "instance_id": "764aea20-be2c-4d97-a504-6dbe1a2a4ca5",
-    "severity": 0,
-    "type": null,
-    "ip": "169.254.76.3",
-    "message": "TESTING EMERGENCY LEVEL"
-}
-{
-    "time_stamp": "2024-02-23 17:25:15 (UTC-05:00) Eastern Time (US & Canada)",
-    "instance_id": "764aea20-be2c-4d97-a504-6dbe1a2a4ca5",
-    "severity": 1,
-    "type": null,
-    "ip": "169.254.76.3",
-    "message": "TESTING ALERT LEVEL"
-}
-{
-    "time_stamp": "2024-02-23 17:25:15 (UTC-05:00) Eastern Time (US & Canada)",
-    "instance_id": "764aea20-be2c-4d97-a504-6dbe1a2a4ca5",
-    "severity": 2,
-    "type": null,
-    "ip": "169.254.76.3",
-    "message": "TESTING CRITICAL LEVEL"
-}
-{
-    "time_stamp": "2024-02-23 17:25:15 (UTC-05:00) Eastern Time (US & Canada)",
-    "instance_id": "764aea20-be2c-4d97-a504-6dbe1a2a4ca5",
-    "severity": 3,
-    "type": null,
-    "ip": "169.254.76.3",
-    "message": "TESTING ERROR LEVEL"
-}
-{
-    "time_stamp": "2024-02-23 17:25:15 (UTC-05:00) Eastern Time (US & Canada)",
-    "instance_id": "764aea20-be2c-4d97-a504-6dbe1a2a4ca5",
-    "severity": 4,
-    "type": null,
-    "ip": "169.254.76.3",
-    "message": "TESTING WARNING LEVEL"
-}
-{
-    "time_stamp": "2024-02-23 17:25:15 (UTC-05:00) Eastern Time (US & Canada)",
-    "instance_id": "764aea20-be2c-4d97-a504-6dbe1a2a4ca5",
-    "severity": 5,
-    "type": null,
-    "ip": "169.254.76.3",
-    "message": "TESTING NOTICE LEVEL"
-}
-{
-    "time_stamp": "2024-02-23 17:25:15 (UTC-05:00) Eastern Time (US & Canada)",
-    "instance_id": "764aea20-be2c-4d97-a504-6dbe1a2a4ca5",
-    "severity": 6,
-    "type": null,
-    "ip": "169.254.76.3",
-    "message": "TESTING INFO LEVEL"
-}
-{
-    "time_stamp": "2024-02-23 17:25:15 (UTC-05:00) Eastern Time (US & Canada)",
-    "instance_id": "764aea20-be2c-4d97-a504-6dbe1a2a4ca5",
-    "severity": 7,
-    "type": null,
-    "ip": "169.254.76.3",
-    "message": "TESTING DEBUG LEVEL"
-}
+[FATAL] [IP:169.254.76.3] [2024-02-23 18:29:40 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: ccefc91a-433f-4e04-8510-01bc515a7aa9]
+[ERROR] [IP:169.254.76.3] [2024-02-23 18:29:40 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: ccefc91a-433f-4e04-8510-01bc515a7aa9]
+[WARNING] [IP:169.254.76.3] [2024-02-23 18:29:40 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: ccefc91a-433f-4e04-8510-01bc515a7aa9]
+[INFO] [IP:169.254.76.3] [2024-02-23 18:29:40 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: ccefc91a-433f-4e04-8510-01bc515a7aa9]
+[DEBUG] [IP:169.254.76.3] [2024-02-23 18:29:40 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: ccefc91a-433f-4e04-8510-01bc515a7aa9]

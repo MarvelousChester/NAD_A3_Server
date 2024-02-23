@@ -26,8 +26,7 @@ def formatMessage(record, format_config):
     else:
         print("not same")
         # DO I Send back message?
-        formatted_message = "Invalid Log Record Given\n"
-        formatted_message += "\n"   
+        formatted_message = INVALID_LOG_NOT_WRITTEN_MESSAGE
  
     return formatted_message
  #https://pypi.org/project/pyrate-limiter/
@@ -36,8 +35,9 @@ lock = threading.Lock()
 
 MAX_LOG_CALLS_PER_MINUTE = 60
 ONE_MINUTE = 60
+INVALID_LOG_NOT_WRITTEN_MESSAGE = "Invalid Log Record Given, Not Written"
 
-@RateLimiter(max_calls=10, period=1)     
+
 def writeIntoLogWorker(record, format_config):
    
     log_location = format_config["log_service_config"]["log_location"]
@@ -46,8 +46,10 @@ def writeIntoLogWorker(record, format_config):
         try:        
             with open(log_location, 'a') as file:
                 formatted_message = formatMessage(record, format_config)
-                file.write(formatted_message)
-                # Should add a timeout in case wait takes too long then skip to stop hanging of service
+                if formatted_message == INVALID_LOG_NOT_WRITTEN_MESSAGE:
+                    sock.send(formatted_message)
+                else:
+                    file.write(formatted_message)
                 lock.release()
         except IOError:
             print("ERROR: record could not be written to file")
