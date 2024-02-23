@@ -1,1 +1,1 @@
-counter += 1
+@RateLimiter(max_calls=10, period=1)     

@@ -1,13 +1,21 @@
 {
-    "format" : {
+    "format_1" : {
         "level": "",
         "ip": "",
-        "dateTime": "",
+        "date_time": "",
         "timezone": "",
         "content" : "",
         "instance_id": ""
     },
-    "formatted_message" : "[{level}] [IP:{ip}] [{dateTime} {timezone}] - {content} \n\t[PID: {instance_id}]",
+    "format_2" : {
+        "time_stamp": "",
+        "instance_id": "",
+        "severity": "",
+        "type": "",
+        "ip": "",
+        "message": ""
+    },
+    "formatted_message_1" : "[{level}] [IP:{ip}] [{dateTime} {timezone}] - {content} \n\t[PID: {instance_id}]",
     "log_service_config":{
 
         "ip": "127.0.0.1",
