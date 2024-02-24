@@ -23,7 +23,7 @@ def checkIfLevelGivenCorrect(record_in_json, required_levels):
     level_found = False
     for level in required_levels:
         # DO TRY EXCEPT HERE SO THAT IF USER FIDDLES WITH ANYTHING IT WILL SNED INVALID
-         if level ==  record_in_json.get("level"):
+        if (level == record_in_json.get("level")):
             level_found = True
     
     return level_found                                            
@@ -40,15 +40,12 @@ def formatMessage(record, format_config):
     if(format_config["format_1"]["structure"].keys() == record_in_json.keys()):
         # Check if level found in record matches required
         found_level = checkIfLevelGivenCorrect(record_in_json, format_config["format_1"]["required_levels"])
-        
+        print(found_level)
         if(found_level == False):
             formatted_message = INVALID_LOG_NOT_WRITTEN_MESSAGE
         else:
             formatted_message = json.dumps(record_in_json, indent=4)
             formatted_message += "\n"   
-        
-        formatted_message = format_config["formatted_message_1"].format(**record_in_json)
-        formatted_message += "\n"  
     elif format_config["format_2"]["structure"].keys() == record_in_json.keys():
          # Check if severity found in record matches required
         found_severity= checkIfSeverityGivenCorrect(record_in_json, format_config["format_2"]["required_severity"])
