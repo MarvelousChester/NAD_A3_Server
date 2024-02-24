@@ -55494,3 +55494,685 @@
 	[PID: 5ab5967d-6298-4cd4-8f49-25aafe3291b4]
 [ERROR] [IP:169.254.76.3] [2024-02-24 16:00:29 (UTC-05:00) Eastern Time (US & Canada)] - SPAMMING 
 	[PID: 5ab5967d-6298-4cd4-8f49-25aafe3291b4]
+[FATAL] [IP:169.254.76.3] [2024-02-24 16:45:04 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 2fc0ad2b-2e0f-4ac7-9f5c-1b3debb642a1]
+[ERROR] [IP:169.254.76.3] [2024-02-24 16:45:04 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 2fc0ad2b-2e0f-4ac7-9f5c-1b3debb642a1]
+[WARNING] [IP:169.254.76.3] [2024-02-24 16:45:04 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 2fc0ad2b-2e0f-4ac7-9f5c-1b3debb642a1]
+[INFO] [IP:169.254.76.3] [2024-02-24 16:45:04 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 2fc0ad2b-2e0f-4ac7-9f5c-1b3debb642a1]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 16:45:04 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 2fc0ad2b-2e0f-4ac7-9f5c-1b3debb642a1]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:03:42 (UTC-05:00) Eastern Time (US & Canada)] - testing manual 
+	[PID: 56135c67-f898-44c8-ace6-3fb3950f7abd]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:04:28 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 79026d59-61bb-418b-ad3d-66648824be14]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:04:28 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 79026d59-61bb-418b-ad3d-66648824be14]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:04:28 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 79026d59-61bb-418b-ad3d-66648824be14]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:04:28 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 79026d59-61bb-418b-ad3d-66648824be14]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:04:28 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 79026d59-61bb-418b-ad3d-66648824be14]
+{
+    "time_stamp": "2024-02-24 17:06:00 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "66129788-cb0b-4c30-ab63-1212d7908499",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "gfasdga"
+}
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:07:59 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 1deedbe2-70b5-45e7-b85a-8c763d0ec397]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:07:59 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 1deedbe2-70b5-45e7-b85a-8c763d0ec397]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:07:59 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 1deedbe2-70b5-45e7-b85a-8c763d0ec397]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:07:59 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 1deedbe2-70b5-45e7-b85a-8c763d0ec397]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:07:59 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 1deedbe2-70b5-45e7-b85a-8c763d0ec397]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:08:20 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 0bb012c2-1e20-42fb-9094-c2d51f431bd6]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:08:20 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 0bb012c2-1e20-42fb-9094-c2d51f431bd6]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:08:20 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 0bb012c2-1e20-42fb-9094-c2d51f431bd6]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:08:20 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 0bb012c2-1e20-42fb-9094-c2d51f431bd6]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:08:21 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 0bb012c2-1e20-42fb-9094-c2d51f431bd6]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:08:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:08:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:08:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:08:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:08:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:08:43 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:08:43 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:08:43 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:08:43 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:08:43 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 05e562b0-6983-4b80-8a42-b7994fde755e]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:09:45 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:09:45 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:09:45 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:09:45 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:09:45 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:09:48 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:09:48 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:09:48 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:09:48 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:09:48 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:10:01 (UTC-05:00) Eastern Time (US & Canada)] - 53155 
+	[PID: f51ff289-9c4c-428d-8493-fb12600acc34]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:10:42 (UTC-05:00) Eastern Time (US & Canada)] - 15 
+	[PID: 174963e8-aa22-445f-89c2-c216aa7e756b]
+{
+    "time_stamp": "2024-02-24 17:10:50 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "174963e8-aa22-445f-89c2-c216aa7e756b",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "fsa"
+}
+{
+    "time_stamp": "2024-02-24 17:11:04 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f226414e-5fa4-4020-9cc1-3c0992c48389",
+    "severity": 1,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "j0"
+}
+{
+    "time_stamp": "2024-02-24 17:11:16 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f3bf441f-36d2-4a4b-9254-0d49efb8d113",
+    "severity": 1,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "l"
+}
+{
+    "time_stamp": "2024-02-24 17:11:34 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "54c4ace1-e9bf-470b-8651-fcf0ce60c3a6",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "2"
+}
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:16:22 (UTC-05:00) Eastern Time (US & Canada)] - Testing 
+	[PID: a2363576-5296-4c43-9291-612f1fde9e2a]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:17:54 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 1b2dd1e0-fc46-4cbf-9324-fbc83b69922a]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:18:08 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: dc9e4104-7c2c-4db0-9907-e69c2db1431c]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:18:08 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: dc9e4104-7c2c-4db0-9907-e69c2db1431c]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:18:08 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: dc9e4104-7c2c-4db0-9907-e69c2db1431c]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:18:08 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: dc9e4104-7c2c-4db0-9907-e69c2db1431c]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:18:08 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: dc9e4104-7c2c-4db0-9907-e69c2db1431c]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:18:42 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: a5e20f92-195d-4b40-b1fe-3beec2fd15ca]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:18:42 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: a5e20f92-195d-4b40-b1fe-3beec2fd15ca]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:18:42 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: a5e20f92-195d-4b40-b1fe-3beec2fd15ca]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:18:42 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: a5e20f92-195d-4b40-b1fe-3beec2fd15ca]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:18:42 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: a5e20f92-195d-4b40-b1fe-3beec2fd15ca]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:20:57 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 5c6bdef5-1d5d-4bea-9813-a51425656331]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:20:57 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 5c6bdef5-1d5d-4bea-9813-a51425656331]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:20:57 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 5c6bdef5-1d5d-4bea-9813-a51425656331]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:20:57 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 5c6bdef5-1d5d-4bea-9813-a51425656331]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:20:57 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 5c6bdef5-1d5d-4bea-9813-a51425656331]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:21:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: b63270ff-13cd-4fd0-b0a4-b6d4487cb757]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:21:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: b63270ff-13cd-4fd0-b0a4-b6d4487cb757]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:21:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: b63270ff-13cd-4fd0-b0a4-b6d4487cb757]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:21:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: b63270ff-13cd-4fd0-b0a4-b6d4487cb757]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:21:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: b63270ff-13cd-4fd0-b0a4-b6d4487cb757]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:21:22 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 6fbc5e10-ea75-4830-96f0-37288d59e1ff]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:21:22 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 6fbc5e10-ea75-4830-96f0-37288d59e1ff]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:21:22 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 6fbc5e10-ea75-4830-96f0-37288d59e1ff]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:21:22 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 6fbc5e10-ea75-4830-96f0-37288d59e1ff]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:21:22 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 6fbc5e10-ea75-4830-96f0-37288d59e1ff]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:21:30 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 5f7af76d-8aef-4dc8-8cf3-d203633df740]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:21:30 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 5f7af76d-8aef-4dc8-8cf3-d203633df740]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:21:30 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 5f7af76d-8aef-4dc8-8cf3-d203633df740]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:21:30 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 5f7af76d-8aef-4dc8-8cf3-d203633df740]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:21:30 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 5f7af76d-8aef-4dc8-8cf3-d203633df740]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:21:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: cd4a5140-487e-4c00-964b-936462035e5a]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:21:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: cd4a5140-487e-4c00-964b-936462035e5a]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:21:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: cd4a5140-487e-4c00-964b-936462035e5a]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:21:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: cd4a5140-487e-4c00-964b-936462035e5a]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:21:37 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: cd4a5140-487e-4c00-964b-936462035e5a]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:21:44 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 3f89f51d-727e-4b7d-8be8-bdf542159668]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:21:44 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 3f89f51d-727e-4b7d-8be8-bdf542159668]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:21:44 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 3f89f51d-727e-4b7d-8be8-bdf542159668]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:21:44 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 3f89f51d-727e-4b7d-8be8-bdf542159668]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:21:44 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 3f89f51d-727e-4b7d-8be8-bdf542159668]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 71346a46-7e0d-401a-adf3-4bd998bce69e]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 71346a46-7e0d-401a-adf3-4bd998bce69e]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 71346a46-7e0d-401a-adf3-4bd998bce69e]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 71346a46-7e0d-401a-adf3-4bd998bce69e]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 71346a46-7e0d-401a-adf3-4bd998bce69e]
+{
+    "time_stamp": "2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "71346a46-7e0d-401a-adf3-4bd998bce69e",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING EMERGENCY LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "71346a46-7e0d-401a-adf3-4bd998bce69e",
+    "severity": 1,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ALERT LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "71346a46-7e0d-401a-adf3-4bd998bce69e",
+    "severity": 2,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING CRITICAL LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "71346a46-7e0d-401a-adf3-4bd998bce69e",
+    "severity": 3,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ERROR LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "71346a46-7e0d-401a-adf3-4bd998bce69e",
+    "severity": 4,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING WARNING LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "71346a46-7e0d-401a-adf3-4bd998bce69e",
+    "severity": 5,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING NOTICE LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "71346a46-7e0d-401a-adf3-4bd998bce69e",
+    "severity": 6,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING INFO LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:14 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "71346a46-7e0d-401a-adf3-4bd998bce69e",
+    "severity": 7,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING DEBUG LEVEL"
+}
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: f1059a6d-ca3c-4081-ab1a-d7e877689642]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: f1059a6d-ca3c-4081-ab1a-d7e877689642]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: f1059a6d-ca3c-4081-ab1a-d7e877689642]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: f1059a6d-ca3c-4081-ab1a-d7e877689642]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: f1059a6d-ca3c-4081-ab1a-d7e877689642]
+{
+    "time_stamp": "2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f1059a6d-ca3c-4081-ab1a-d7e877689642",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING EMERGENCY LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f1059a6d-ca3c-4081-ab1a-d7e877689642",
+    "severity": 1,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ALERT LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f1059a6d-ca3c-4081-ab1a-d7e877689642",
+    "severity": 2,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING CRITICAL LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f1059a6d-ca3c-4081-ab1a-d7e877689642",
+    "severity": 3,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ERROR LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f1059a6d-ca3c-4081-ab1a-d7e877689642",
+    "severity": 4,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING WARNING LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f1059a6d-ca3c-4081-ab1a-d7e877689642",
+    "severity": 5,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING NOTICE LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f1059a6d-ca3c-4081-ab1a-d7e877689642",
+    "severity": 6,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING INFO LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:22:36 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "f1059a6d-ca3c-4081-ab1a-d7e877689642",
+    "severity": 7,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING DEBUG LEVEL"
+}
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:23:22 (UTC-05:00) Eastern Time (US & Canada)] - CONTENT 
+	[PID: f1059a6d-ca3c-4081-ab1a-d7e877689642]
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 2fc9d607-0879-41a2-b5e3-440e31adb972]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 2fc9d607-0879-41a2-b5e3-440e31adb972]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 2fc9d607-0879-41a2-b5e3-440e31adb972]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 2fc9d607-0879-41a2-b5e3-440e31adb972]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 2fc9d607-0879-41a2-b5e3-440e31adb972]
+{
+    "time_stamp": "2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2fc9d607-0879-41a2-b5e3-440e31adb972",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING EMERGENCY LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2fc9d607-0879-41a2-b5e3-440e31adb972",
+    "severity": 1,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ALERT LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2fc9d607-0879-41a2-b5e3-440e31adb972",
+    "severity": 2,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING CRITICAL LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2fc9d607-0879-41a2-b5e3-440e31adb972",
+    "severity": 3,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ERROR LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2fc9d607-0879-41a2-b5e3-440e31adb972",
+    "severity": 4,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING WARNING LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2fc9d607-0879-41a2-b5e3-440e31adb972",
+    "severity": 5,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING NOTICE LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2fc9d607-0879-41a2-b5e3-440e31adb972",
+    "severity": 6,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING INFO LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:12 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2fc9d607-0879-41a2-b5e3-440e31adb972",
+    "severity": 7,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING DEBUG LEVEL"
+}
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 81c378db-83df-47c6-a544-3c380a938b14]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 81c378db-83df-47c6-a544-3c380a938b14]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 81c378db-83df-47c6-a544-3c380a938b14]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 81c378db-83df-47c6-a544-3c380a938b14]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 81c378db-83df-47c6-a544-3c380a938b14]
+{
+    "time_stamp": "2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "81c378db-83df-47c6-a544-3c380a938b14",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING EMERGENCY LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "81c378db-83df-47c6-a544-3c380a938b14",
+    "severity": 1,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ALERT LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "81c378db-83df-47c6-a544-3c380a938b14",
+    "severity": 2,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING CRITICAL LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "81c378db-83df-47c6-a544-3c380a938b14",
+    "severity": 3,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ERROR LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "81c378db-83df-47c6-a544-3c380a938b14",
+    "severity": 4,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING WARNING LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "81c378db-83df-47c6-a544-3c380a938b14",
+    "severity": 5,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING NOTICE LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "81c378db-83df-47c6-a544-3c380a938b14",
+    "severity": 6,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING INFO LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:29 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "81c378db-83df-47c6-a544-3c380a938b14",
+    "severity": 7,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING DEBUG LEVEL"
+}
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+{
+    "time_stamp": "2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING EMERGENCY LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 1,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ALERT LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 2,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING CRITICAL LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 3,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ERROR LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 4,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING WARNING LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 5,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING NOTICE LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 6,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING INFO LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:49 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 7,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING DEBUG LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:25:55 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "ogv689"
+}
+[FATAL] [IP:169.254.76.3] [2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING FATAL LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+[ERROR] [IP:169.254.76.3] [2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING ERROR LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+[WARNING] [IP:169.254.76.3] [2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING WARNING LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+[INFO] [IP:169.254.76.3] [2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+[DEBUG] [IP:169.254.76.3] [2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)] - TESTING INFO LEVEL 
+	[PID: 2e4599d0-4f3d-4480-9843-74313cd30f95]
+{
+    "time_stamp": "2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 0,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING EMERGENCY LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 1,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ALERT LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 2,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING CRITICAL LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 3,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING ERROR LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 4,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING WARNING LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 5,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING NOTICE LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 6,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING INFO LEVEL"
+}
+{
+    "time_stamp": "2024-02-24 17:26:05 (UTC-05:00) Eastern Time (US & Canada)",
+    "instance_id": "2e4599d0-4f3d-4480-9843-74313cd30f95",
+    "severity": 7,
+    "type": null,
+    "ip": "169.254.76.3",
+    "message": "TESTING DEBUG LEVEL"
+}

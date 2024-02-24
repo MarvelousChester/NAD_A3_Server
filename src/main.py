@@ -29,9 +29,6 @@ class RateLimiter:
             
             counter = connection_request_tracker.get("requests_counted_per_minute")
             time_stamp = connection_request_tracker.get("time_stamp")
-            print(current_time_stamp)
-            print(time_stamp)
-            print(current_time_stamp - time_stamp)
             # check if counter has reached max per minute 
             if (current_time_stamp - time_stamp) < MINUTE:
                 # Check if within time
@@ -76,14 +73,35 @@ def checkIfLevelGivenCorrect(record_in_json, required_levels):
                            
 INVALID_LOG_NOT_WRITTEN_MESSAGE = "Invalid Log Record Given, Not Written"
 
+
+def requiredKeysFoundInFormat1(format_config ,record_to_search):
+     for key in format_config["format_1"]["structure"]["required"].keys():
+        if(key in record_to_search.keys()):
+            required_keys_found = True
+        else:
+            required_keys_found = False
+            break
+
 def formatMessage(record, format_config):
     
     decoded_record = record.decode("unicode_escape")
     record_in_json = json.loads(decoded_record)
     
-    print(record_in_json)
+    required_keys_found = False
+    
+    # Check if Required Keys Found
+    # MOve this into a seperate function
+    # 
+    #
+    required_keys_found = requiredKeysFoundInFormat1(format_config,record_in_json)
+    # Merge Required and additional -> Do Comparision if matches record in config
+    required_log_format = format_config["format_1"]["structure"]["required"]
+    additional_log_format =  format_config["format_1"]["structure"]["additional"]
+    merged_format = {**required_log_format, **additional_log_format}
+    
+   
     # Check if format 1 matches record, check if format 2 matches record else invalid format
-    if(format_config["format_1"]["structure"].keys() == record_in_json.keys()):
+    if(merged_format.keys() == record_in_json.keys()):
         # Check if level found in record matches required
         found_level = checkIfLevelGivenCorrect(record_in_json, format_config["format_1"]["required_levels"])
         if(found_level == False):

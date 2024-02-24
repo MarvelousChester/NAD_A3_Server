@@ -3,12 +3,16 @@
     "format_1": {
         "required_levels": ["DEBUG", "INFO", "WARNING", "ERROR", "FATAL"],
         "structure": {
-            "level": "",
-            "ip": "",
-            "dateTime": "",
-            "timezone": "",
-            "content": "",
-            "instance_id": ""
+            "required": {
+                "level": "",
+                "instance_id": "",
+                "content": ""
+            },
+            "additional" :{
+                "ip": "",
+                "dateTime": "",
+                "timezone": ""
+            }
         }
     },
     "format_2": {
