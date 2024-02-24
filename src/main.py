@@ -1,9 +1,8 @@
 import socket
 import sys
 import json
-from ratelimit import limits, sleep_and_retry
 import threading
-
+from tendo import singleton
 import time
 
 MAX_REQUESTS_PER_MINUTE = 1000
@@ -150,6 +149,11 @@ def writeIntoLogWorker(record, format_config, conn):
  #except IOError:
           #  print("ERROR: record could not be written to file")
 
+try:
+    me = singleton.SingleInstance()
+except singleton.SingleInstanceException as e:
+    exit()
+    
 config_file = open("config.json")
 
 dataConfig = json.load(config_file)
