@@ -3,27 +3,65 @@ import sys
 import json
 
 import threading
+
+# Create function to validate confign not messed up and thus prevents misconfiguration
+
+def checkIfSeverityGivenCorrect(record_in_json, required_severity):
+    
+    severity_found = False
+   
+    for severity in required_severity:
+        # DO TRY EXCEPT HERE SO THAT IF USER FIDDLES WITH ANYTHING IT WILL SNED INVALID
+         if severity == record_in_json.get("severity"):
+            severity_found = True
+    
+    return severity_found
+
+
+def checkIfLevelGivenCorrect(record_in_json, required_levels):
+    
+    level_found = False
+    for level in required_levels:
+        # DO TRY EXCEPT HERE SO THAT IF USER FIDDLES WITH ANYTHING IT WILL SNED INVALID
+         if level ==  record_in_json.get("level"):
+            level_found = True
+    
+    return level_found                                            
+                           
 INVALID_LOG_NOT_WRITTEN_MESSAGE = "Invalid Log Record Given, Not Written"
+
 def formatMessage(record, format_config):
     
     decoded_record = record.decode("unicode_escape")
     record_in_json = json.loads(decoded_record)
     
     print(record_in_json)
-    
-    if(format_config["format_1"].keys() == record_in_json.keys()):
-        print("same")
+    # Check if format 1 matches record, check if format 2 matches record else invalid format
+    if(format_config["format_1"]["structure"].keys() == record_in_json.keys()):
+        # Check if level found in record matches required
+        found_level = checkIfLevelGivenCorrect(record_in_json, format_config["format_1"]["required_levels"])
+        
+        if(found_level == False):
+            formatted_message = INVALID_LOG_NOT_WRITTEN_MESSAGE
+        else:
+            formatted_message = json.dumps(record_in_json, indent=4)
+            formatted_message += "\n"   
+        
         formatted_message = format_config["formatted_message_1"].format(**record_in_json)
-        formatted_message += "\n"   
-    elif format_config["format_2"].keys() == record_in_json.keys():
-        print("Test")
-        formatted_message = json.dumps(record_in_json, indent=4)
-        formatted_message += "\n"   
+        formatted_message += "\n"  
+    elif format_config["format_2"]["structure"].keys() == record_in_json.keys():
+         # Check if severity found in record matches required
+        found_severity= checkIfSeverityGivenCorrect(record_in_json, format_config["format_2"]["required_severity"])
+        if(found_severity == False):
+            formatted_message = INVALID_LOG_NOT_WRITTEN_MESSAGE
+        else:
+            formatted_message = json.dumps(record_in_json, indent=4)
+            formatted_message += "\n"   
     else:
-        print("not same")
         # DO I Send back message?
         formatted_message = INVALID_LOG_NOT_WRITTEN_MESSAGE
  
+    
     return formatted_message
  #https://pypi.org/project/pyrate-limiter/
 
@@ -78,7 +116,6 @@ while (True):
     try:
         record = conn.recv(2054)
         writeIntoLogWorker(record, dataConfig, conn)
-        
     except Exception as e:
         print(f"Error with connection :{e}")
     finally:
