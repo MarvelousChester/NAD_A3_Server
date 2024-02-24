@@ -81,14 +81,16 @@ sock.listen()
     # Send message that 15 second timeout
 
 # Continue
+connection_counter = 0
+connections_per_minute = 60
 
 while (True):
     
     print("waiting for connection")
     conn, addr = sock.accept()
+    counter = 0
     print("Connected")
     try:
-       
         record = conn.recv(2054)
         x = threading.Thread(target=writeIntoLogWorker, args=(record, dataConfig,))
         x.start()
@@ -98,7 +100,8 @@ while (True):
         conn.close()
 
         
-        
-# Could have it so that each time a writer is going and it's done it will decrement and incr 
+
+
+# Count how many connections per minute
         
                   
