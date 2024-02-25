@@ -175,12 +175,13 @@ lock = threading.Lock()
 #           rate_limiter: object of rate_limiter used to if to reading data and quit
 # Returns: NONE   
 def writeIntoLogWorker(format_config, conn, connection_id, rate_limiter):
-    with lock:
-        can_write = rate_limiter.can_make_requests(connection_id)
-        log_location = format_config["log_service_config"]["log_location"]
-        try:
-            if(can_write == True):
-                record = conn.recv(2054)
+
+    can_write = rate_limiter.can_make_requests(connection_id)
+    log_location = format_config["log_service_config"]["log_location"]
+    try:
+        if(can_write == True):
+            record = conn.recv(2054)
+            with lock:
                 if record:
                     try:        
                         with open(log_location, 'a') as file:
@@ -193,13 +194,10 @@ def writeIntoLogWorker(format_config, conn, connection_id, rate_limiter):
                                 conn.sendall(bytes("0", 'utf-8'))
                     except Exception as e:
                         print(e) 
-            else:
-                print("SENDING RESPONSE")
-                conn.sendall(bytes(f"(-2)~Rate Limited, exceeded max requests per minute:{MAX_REQUESTS_PER_MINUTE}", 'utf-8'))
-                print("SENT RESPONSE")
-        except Exception as e:
-            print(e)
-
+        else:
+            conn.sendall(bytes(f"(-2)~Rate Limited, exceeded max requests per minute:{MAX_REQUESTS_PER_MINUTE}", 'utf-8'))
+    except Exception as e:
+        print(e)
 
 
 try:
@@ -209,22 +207,14 @@ except singleton.SingleInstanceException as e:
     
 def Main():
     config_file = open("config.json")
-
     dataConfig = json.load(config_file)
-
     service_ip = dataConfig["log_service_config"]["ip"]
-
     service_port = dataConfig["log_service_config"]["port"]
-
     log_location = dataConfig["log_service_config"]["log_location"]
 
-
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
     address = (service_ip, int(service_port))
-
     sock.bind(address)
-
     sock.listen()
 
     counter = 0
@@ -234,19 +224,15 @@ def Main():
 
     while (True):
         # ERORR HAPPENING WITH TRY BLOCk
-        print("waiting for connection")
         conn, addr = sock.accept()
-        print("Connected")
         connection_id = socket.gethostbyname(socket.gethostname())
         try:
             x = threading.Thread(target=writeIntoLogWorker, args=(dataConfig, conn, connection_id, rate_limiter))
             x.start()
-            print(f"[ACTIVE CONNECTIONS] {threading.activeCount() - 1}")
         except Exception as e:
             print(f"Error with connection :{e}")
 
-            
-            
+               
         
 Main()       
         
