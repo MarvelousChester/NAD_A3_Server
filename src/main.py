@@ -104,16 +104,25 @@ INVALID_LOG_NOT_WRITTEN_MESSAGE = "Invalid Log Record Given, Not Written"
 
 
 
-#def requiredKeysFoundInFormat1(format_config, record):
-#    decoded_record = record.decode("unicode_escape")
-#    record_in_json = json.loads(decoded_record)
-#    for key in format_config["format_1"]["structure"]["required"].keys():
-#        if(key in record_in_json.keys()):
-#            required_keys_found = True
-#        else:
-#            required_keys_found = False
-#            break
-
+def requiredKeysFoundInFormat1(format_config, record):
+   decoded_record = record.decode("unicode_escape")
+   record_in_json = json.loads(decoded_record)
+   for key in format_config["format_1"]["structure"]["required"].keys():
+        if(key in record_in_json.keys()):
+            required_keys_found = True
+        else:
+            required_keys_found = False
+            break
+        
+def requiredKeysFoundInFormat2(format_config, record):
+   decoded_record = record.decode("unicode_escape")
+   record_in_json = json.loads(decoded_record)
+   for key in format_config["format_2"]["structure"]["required"].keys():
+        if(key in record_in_json.keys()):
+            required_keys_found = True
+        else:
+            required_keys_found = False
+            break
 
 # Name: formatMessage
 # Purpose: Given the record it will format it for logging purposes. If the logging format given is matching 1st format it will use the 
@@ -135,15 +144,22 @@ def formatMessage(record, format_config):
     decoded_record = record.decode("unicode_escape")
     record_in_json = json.loads(decoded_record)
     
-    required_keys_found = False
+    required_keys_found_format1 = requiredKeysFoundInFormat1(format_config, record)
     
-    required_log_format = format_config["format_1"]["structure"]["required"]
-    additional_log_format =  format_config["format_1"]["structure"]["additional"]
-    merged_format = {**required_log_format, **additional_log_format}
+    
+    
+    required_log_format1 = format_config["format_1"]["structure"]["required"]
+    additional_log_format1 =  format_config["format_1"]["structure"]["additional"]
+    merged_format1 = {**required_log_format1, **additional_log_format1}
+    
+    
+    required_log_format2 = format_config["format_2"]["structure"]["required"]
+    additional_log_format2 =  format_config["format_2"]["structure"]["additional"]
+    merged_format2 =  {**required_log_format2, **additional_log_format2}
     
    
     # Check if format 1 matches record, check if format 2 matches record else invalid format
-    if(merged_format.keys() == record_in_json.keys()):
+    if(merged_format1.keys() == record_in_json.keys()):
         # Check if level found in record matches required
         found_level = checkIfLevelGivenCorrect(record_in_json, format_config["format_1"]["required_levels"])
         if(found_level == False):
@@ -151,7 +167,7 @@ def formatMessage(record, format_config):
         else:
             formatted_message = format_config["formatted_message_1"].format(**record_in_json)
             formatted_message += "\n"   
-    elif format_config["format_2"]["structure"].keys() == record_in_json.keys():
+    elif merged_format2.keys() == record_in_json.keys():
          # Check if severity found in record matches required
         found_severity= checkIfSeverityGivenCorrect(record_in_json, format_config["format_2"]["required_severity"])
         if(found_severity == False):

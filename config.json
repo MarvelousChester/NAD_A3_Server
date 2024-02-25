@@ -18,12 +18,16 @@
     "format_2": {
         "required_severity": [0, 1, 2, 3, 4, 5, 6, 7],
         "structure": {
-            "time_stamp": "",
-            "instance_id": "",
-            "severity": "",
-            "type": "",
-            "ip": "",
-            "message": ""
+            "required": {
+                "severity": "",
+                "instance_id": "",
+                "message": ""
+            },
+            "additional" :{
+                "time_stamp": "",
+                "type": "",
+                "ip": ""
+            }
         }
     },
     "formatted_message_1" : "[{level}] [IP:{ip}] [{dateTime} {timezone}] - {content} \n\t[PID: {instance_id}]",
