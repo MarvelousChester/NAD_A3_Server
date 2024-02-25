@@ -7,10 +7,11 @@ import time
 
 MAX_REQUESTS_PER_MINUTE = 1000
 MINUTE = 60
+
+
 ADD_TO_KEEP_TRACK  = 2
 
-
-
+# Create function to validate confign not messed up and thus prevents misconfiguration
 class RateLimiter:
     
     def __init__(self):
@@ -18,12 +19,8 @@ class RateLimiter:
         self.tracker = { "connection": {"requests_counted_per_minute" : None, "time_stamp" : None}}
        
 
-    # Name: can_make_requests
-    # Purpose: Checks if the connection ip can make a request and if not it return a bool to indicate to read the response or not
-    # Parameters: client_indetifier: the public facing ip to identify where coming from 
-    # Returns:
-    #   True if client can make a logging request        
-    #   False if client cannot make a request and must wait
+    # returns True if client can make a logging request        
+    # Returns False if client cannot make a request and must wait
     def can_make_requests(self, client_identifier):
         # Check if client within tracker
         current_time_stamp = time.time()
@@ -51,24 +48,13 @@ class RateLimiter:
             new_client = {client_identifier : { "requests_counted_per_minute" : 1, "time_stamp" : current_time_stamp}}
             self.tracker.update(new_client)
             return True
-    # Name: add_to_tracker
-    # Purpose: Add ip to tracker so it can track when last connection time stamp
-    # Parameters: client_indetifier: the public facing ip to identify where coming from 
-    # Returns: NONE
+        
     def add_to_tracker(self, client_identifier):
         current_time_stamp = time.time()
         new_client = {client_identifier : { "requests_counted_per_minute" : 1, "time_stamp" : current_time_stamp}}
         self.tracker.update(new_client)
+       
     
-
-# Name: checkIfSeverityGivenCorrect
-# Purpose: Checks if the log record has given the proper severities for format
-# Parameters: 
-#           record_in_json: the record that was passed for logging in json format to check the severities 
-#           required_severity: json record of the severities that to check against
-# Returns: 
-#      True: IF found
-#      False: Not matching 
 def checkIfSeverityGivenCorrect(record_in_json, required_severity):
     
     severity_found = False
@@ -81,14 +67,6 @@ def checkIfSeverityGivenCorrect(record_in_json, required_severity):
     return severity_found
 
 
-# Name: checkIfLevelGivenCorrect
-# Purpose: Checks if the log record has given the proper levels for format
-# Parameters: 
-#           record_in_json: the record that was passed for logging in json format to check the levels 
-#           required_severity: json record of the levels that to check against
-# Returns: 
-#      True: IF found
-#      False: Not matching
 def checkIfLevelGivenCorrect(record_in_json, required_levels):
     
     level_found = False
@@ -102,26 +80,16 @@ def checkIfLevelGivenCorrect(record_in_json, required_levels):
 INVALID_LOG_NOT_WRITTEN_MESSAGE = "Invalid Log Record Given, Not Written"
 
 
+def requiredKeysFoundInFormat1(format_config, record):
+    decoded_record = record.decode("unicode_escape")
+    record_in_json = json.loads(decoded_record)
+    for key in format_config["format_1"]["structure"]["required"].keys():
+        if(key in record_in_json.keys()):
+            required_keys_found = True
+        else:
+            required_keys_found = False
+            break
 
-
-#def requiredKeysFoundInFormat1(format_config, record):
-#    decoded_record = record.decode("unicode_escape")
-#    record_in_json = json.loads(decoded_record)
-#    for key in format_config["format_1"]["structure"]["required"].keys():
-#        if(key in record_in_json.keys()):
-#            required_keys_found = True
-#        else:
-#            required_keys_found = False
-#            break
-
-
-# Name: formatMessage
-# Purpose: Given the record it will format it for logging purposes. If the logging format given is matching 1st format it will use the 
-#          format message in json to print into log
-# Parameters: 
-#           record: the record that was passed for logging in bytes to check the levels 
-#           format_config: Config to base the format upon
-# Returns: Formatted message for writing into file
 def formatMessage(record, format_config):
     
 
@@ -130,7 +98,7 @@ def formatMessage(record, format_config):
     # MOve this into a seperate function
     # 
     #
-    #required_keys_found = requiredKeysFoundInFormat1(format_config,record)
+    required_keys_found = requiredKeysFoundInFormat1(format_config,record)
     # Merge Required and additional -> Do Comparision if matches record in config
     decoded_record = record.decode("unicode_escape")
     record_in_json = json.loads(decoded_record)
@@ -165,90 +133,72 @@ def formatMessage(record, format_config):
     return formatted_message
 
 lock = threading.Lock()
-
-# Name: writeIntoLogWorker
-# Purpose: Thread function that is used for client to write the log into in the format given by formatMessage function
-# Parameters: 
-#           format_config: Config to base the format upon
-#           conn: connection of the logging client 
-#           connection_id: public facing ip of the client
-#           rate_limiter: object of rate_limiter used to if to reading data and quit
-# Returns: NONE   
-def writeIntoLogWorker(format_config, conn, connection_id, rate_limiter):
-    with lock:
-        can_write = rate_limiter.can_make_requests(connection_id)
-        log_location = format_config["log_service_config"]["log_location"]
-        try:
-            if(can_write == True):
-                record = conn.recv(2054)
-                if record:
-                    try:        
-                        with open(log_location, 'a') as file:
-                            formatted_message = formatMessage(record, format_config)
-                            if formatted_message == INVALID_LOG_NOT_WRITTEN_MESSAGE:
-                                conn.sendall(bytes(formatted_message, 'utf-8'))
-                            # Should add a timeout in case wait takes too long then skip to stop hanging of service
-                            else:
-                                file.write(formatted_message)
-                                conn.sendall(bytes("0", 'utf-8'))
-                    except Exception as e:
-                        print(e) 
-            else:
-                print("SENDING RESPONSE")
-                conn.sendall(bytes(f"(-2)~Rate Limited, exceeded max requests per minute:{MAX_REQUESTS_PER_MINUTE}", 'utf-8'))
-                print("SENT RESPONSE")
+       
+def writeIntoLogWorker(record, format_config, conn):
+   
+    log_location = format_config["log_service_config"]["log_location"]
+    if record:
+        saved_connection = conn
+        lock.acquire()
+        try:        
+            with open(log_location, 'a') as file:
+                formatted_message = formatMessage(record, format_config)
+                if formatted_message == INVALID_LOG_NOT_WRITTEN_MESSAGE:
+                    saved_connection.sendall(bytes(formatted_message, 'utf-8'))
+                # Should add a timeout in case wait takes too long then skip to stop hanging of service
+                else:
+                    file.write(formatted_message)
+                    saved_connection.sendall(bytes("0", 'utf-8'))
+                conn.close()
+                lock.release()
         except Exception as e:
             print(e)
-
-
-
 try:
     me = singleton.SingleInstance()
 except singleton.SingleInstanceException as e:
-    exit()   
+    exit()
     
-def Main():
-    config_file = open("config.json")
+config_file = open("config.json")
 
-    dataConfig = json.load(config_file)
+dataConfig = json.load(config_file)
 
-    service_ip = dataConfig["log_service_config"]["ip"]
+service_ip = dataConfig["log_service_config"]["ip"]
 
-    service_port = dataConfig["log_service_config"]["port"]
+service_port = dataConfig["log_service_config"]["port"]
 
-    log_location = dataConfig["log_service_config"]["log_location"]
+log_location = dataConfig["log_service_config"]["log_location"]
 
 
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    address = (service_ip, int(service_port))
+address = (service_ip, int(service_port))
 
-    sock.bind(address)
+sock.bind(address)
 
-    sock.listen()
+sock.listen()
 
-    counter = 0
-    rate_limiter = RateLimiter()
+counter = 0
+rate_limiter = RateLimiter()
 
-    # Issue might be when the client connects the connection gets overwritten and it doesn't get closed
-
-    while (True):
-        # ERORR HAPPENING WITH TRY BLOCk
-        print("waiting for connection")
-        conn, addr = sock.accept()
-        print("Connected")
-        connection_id = socket.gethostbyname(socket.gethostname())
-        try:
-            x = threading.Thread(target=writeIntoLogWorker, args=(dataConfig, conn, connection_id, rate_limiter))
+while (True):
+    # ERORR HAPPENING WITH TRY BLOCk
+    print("waiting for connection")
+    conn, addr = sock.accept()
+    print("Connected")
+    connection_id = socket.gethostbyname(socket.gethostname())
+    try:
+        can_write = rate_limiter.can_make_requests(connection_id)
+        if(can_write == True):
+            record = conn.recv(2054)
+            x = threading.Thread(target=writeIntoLogWorker, args=(record, dataConfig, conn))
             x.start()
-            print(f"[ACTIVE CONNECTIONS] {threading.activeCount() - 1}")
-        except Exception as e:
-            print(f"Error with connection :{e}")
-
-            
-            
+        else:
+            # Send message that they exceeded
+            conn.send(bytes(f"(-2)~Rate Limited, exceeded max requests per minute:{MAX_REQUESTS_PER_MINUTE}", 'utf-8'))
+    except Exception as e:
+        print(f"Error with connection :{e}")
         
-Main()       
+        
         
 
 
