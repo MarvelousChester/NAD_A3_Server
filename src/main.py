@@ -107,22 +107,32 @@ INVALID_LOG_NOT_WRITTEN_MESSAGE = "Invalid Log Record Given, Not Written"
 def requiredKeysFoundInFormat1(format_config, record):
    decoded_record = record.decode("unicode_escape")
    record_in_json = json.loads(decoded_record)
-   for key in format_config["format_1"]["structure"]["required"].keys():
-        if(key in record_in_json.keys()):
-            required_keys_found = True
-        else:
-            required_keys_found = False
-            break
+   
+   LEVEL = "level"
+   ID = "instance_id"
+   content = "content"
+   
+   required_formatting = {"level", "instance_id", "content"}
+   
+   required_keys_found = True
+   for key in required_formatting:
+        if key not in record_in_json:
+            required_keys_found = False  # Key missing, set to False and exit loop
+        
+   return required_keys_found
+
         
 def requiredKeysFoundInFormat2(format_config, record):
    decoded_record = record.decode("unicode_escape")
    record_in_json = json.loads(decoded_record)
-   for key in format_config["format_2"]["structure"]["required"].keys():
-        if(key in record_in_json.keys()):
-            required_keys_found = True
-        else:
+   
+   required_formatting = {"severity", "instance_id", "message"}
+   
+   required_keys_found = True
+   for key in required_formatting:
+        if key not in record_in_json:
             required_keys_found = False
-            break
+   return required_keys_found
 
 # Name: formatMessage
 # Purpose: Given the record it will format it for logging purposes. If the logging format given is matching 1st format it will use the 
@@ -145,8 +155,11 @@ def formatMessage(record, format_config):
     record_in_json = json.loads(decoded_record)
     
     required_keys_found_format1 = requiredKeysFoundInFormat1(format_config, record)
+    required_keys_found_format2 = requiredKeysFoundInFormat2(format_config, record)
+    if(required_keys_found_format1 == False and required_keys_found_format2 == False):
+        return INVALID_LOG_NOT_WRITTEN_MESSAGE
     
-    
+   
     
     required_log_format1 = format_config["format_1"]["structure"]["required"]
     additional_log_format1 =  format_config["format_1"]["structure"]["additional"]
